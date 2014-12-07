@@ -21,7 +21,7 @@ composer require zonuexe/objectsystem
 Features
 --------
 
-* Dynamic typing for PHP object
+* Property type check at run time
   * trait `TypedProperty`
   * trait `TypeAssert`
   * class `TypeDefinision`
