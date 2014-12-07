@@ -8,6 +8,12 @@ use ArrayIterator;
  * @copyright  2014 USAMI Kenta
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
+ *
+ * @property int          $int_val
+ * @property int[]        $inv_val_a
+ * @property int|null     $int_val_n
+ * @property int[]|null[] $int_val_na
+ * @property string       $string_val
  */
 final class TypedPropertyTestClass
 {

@@ -102,3 +102,24 @@ PHPのArrayはとても複雑なデータ構造を許容する。端的に言う
 タプルはPHPではarrayを使って表現することができるが、安全に取り扱うためには慎重にコードを書かなければならない。
 
 配列を慎重に扱って構造体のようにするよりも、TypedPropertyを使ったクラスのオブジェクトをプロパティに持つことで、想定外のデータが紛れこむ危険性を減らすことができる。
+
+### PhpStorm / IntelliJ IDEA と仲良しになる
+
+PhpStormやIntelliJ IDEAを利用すると、以下のように書くことでプロパティを型付けすることができる。
+
+```php
+class MyClass2
+{
+    /** @var string */
+    public $hoge;
+
+    /** @var int */
+    public $fuga;
+}
+```
+
+ところが本来のプロパティを使った時と違って、`TypedProperty`を使った場合は上のように書くことができなくなる。
+
+その場合は、[phpDocumentor @property](http://www.phpdoc.org/docs/latest/references/phpdoc/tags/property.html) の記法に従って、クラス定義の上にコメントを書けば良いとのことだ。
+
+https://github.com/zonuexe/php-objectsystem/blob/master/tests/Object/TypedPropertyTest.php#L11 を参考にされたい。
