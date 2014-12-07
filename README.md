@@ -1,6 +1,10 @@
 Teto Objectsystem
 =================
 
+[![Package version](http://img.shields.io/packagist/v/zonuexe/objectsystem.svg)](https://packagist.org/packages/zonuexe/objectsystem)
+[![Build Status](https://travis-ci.org/zonuexe/php-objectsystem.svg?branch=master)](https://travis-ci.org/zonuexe/php-objectsystem)
+[![Packagist](http://img.shields.io/packagist/dt/zonuexe/php-objectsystem.svg)](https://packagist.org/packages/zonuexe/objectsystem)
+
 Object system implementation for PHP
 
 see `poem.ja.md`.
@@ -33,7 +37,7 @@ Copyright
 see `./LICENSE`.
 
     Object system implementation for PHP
-    Copyright (c) 2014, USAMI Kenta <tadsan@zonu.me>
+    Copyright (c) 2014 USAMI Kenta <tadsan@zonu.me>
 
 Teto Kasane
 -----------
