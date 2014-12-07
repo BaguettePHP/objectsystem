@@ -1,0 +1,28 @@
+{
+    "name": "zonuexe/objectsystem",
+    "description": "Object system for PHP",
+    "license": "Apache-2.0",
+    "version": "0.2.0",
+    "authors": [
+        {
+            "name": "USAMI Kenta",
+            "email": "tadsan@zonu.me"
+        }
+    ],
+    "require-dev": {
+         "phpunit/phpunit": "~4.3.5"
+        ,"theseer/phpdox":  "~0.7.0"
+        ,"phploc/phploc":   "~2.0.6"
+        ,"phpmd/phpmd":     "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teto\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Teto\\": "tests/"
+        }
+    }
+}
