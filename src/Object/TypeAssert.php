@@ -22,8 +22,8 @@ trait TypeAssert
      * @param string  $name  Variable name (for error message)
      * @param mixed   $value Received value
      * @param boolean $is_nullable
-     * @throw LogicException
-     * @throw InvalidArgumentException
+     * @throws LogicException
+     * @throws InvalidArgumentException
      */
     protected static function assertValue($expected_type, $name, $value, $is_nullable)
     {
@@ -64,7 +64,7 @@ trait TypeAssert
      *
      * @param mixed  $value Received value
      * @param string $name  Variable name (for error message)
-     * @throw InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     protected static function assertInt($value, $name = null)
     {
@@ -78,7 +78,7 @@ trait TypeAssert
      *
      * @param mixed  $value Received value
      * @param string $name  Variable name (for error message)
-     * @throw InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     protected static function assertString($value, $name = null)
     {
@@ -92,7 +92,7 @@ trait TypeAssert
      *
      * @param mixed  $value Received value
      * @param string $name  Variable name (for error message)
-     * @throw InvalidArgumentException
+     * @throws InvalidArgumentException
      * @link  http://php.net/manual/class.arrayaccess.php
      */
     protected static function assertArrayOrObject($value, $name = null)
@@ -108,7 +108,7 @@ trait TypeAssert
      * @param mixed  $value Received value
      * @param string $class Class name
      * @param string $name  Variable name (for error message)
-     * @throw InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     protected static function assertInstanceOf($value, $class, $name = null)
     {
