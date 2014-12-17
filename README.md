@@ -1,9 +1,9 @@
 Teto Objectsystem
 =================
 
-[![Package version](http://img.shields.io/packagist/v/zonuexe/objectsystem.svg)](https://packagist.org/packages/zonuexe/objectsystem)
+[![Package version](http://img.shields.io/packagist/v/zonuexe/objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
 [![Build Status](https://travis-ci.org/zonuexe/php-objectsystem.svg?branch=master)](https://travis-ci.org/zonuexe/php-objectsystem)
-[![Packagist](http://img.shields.io/packagist/dt/zonuexe/php-objectsystem.svg)](https://packagist.org/packages/zonuexe/objectsystem)
+[![Packagist](http://img.shields.io/packagist/dt/zonuexe/php-objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
 
 Object system implementation for PHP
 
@@ -22,9 +22,9 @@ Features
 --------
 
 * Property type check at run time
-  * trait `TypedProperty`
-  * trait `TypeAssert`
-  * class `TypeDefinision`
+  * `trait TypedProperty`
+  * `trait TypeAssert`
+  * `class TypeDefinision`
 
 References
 ----------
