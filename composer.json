@@ -2,7 +2,6 @@
     "name": "zonuexe/objectsystem",
     "description": "Object system for PHP",
     "license": "Apache-2.0",
-    "version": "0.2.0",
     "authors": [
         {
             "name": "USAMI Kenta",

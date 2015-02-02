@@ -29,6 +29,8 @@ trait TypeAssert
     {
         if ($is_nullable && $value === null) {
             return; // through
+        } elseif ($expected_type === 'mixed') {
+            return; // through
         } elseif ($expected_type === 'enum') {
             if (!isset(self::$enum_values) || !isset(self::$enum_values[$name])) {
                 new LogicException("Doesn't set self::\$enum_values[$name]");
