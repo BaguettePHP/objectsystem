@@ -50,6 +50,8 @@ final class TypeAssertTest extends \Teto\TestCase
             ['float',     1.0],
             ['float',     10000000000000000000000],
             ['enum',      'apple', 'fruit'],
+            ['bool',      true],
+            ['bool',      false],
             ['callable',  function(){} ],
             ['callable',  [dir('.'), 'close']],
             ['callable',  'Datetime::createFromFormat'],
@@ -89,6 +91,8 @@ final class TypeAssertTest extends \Teto\TestCase
             ['int',       1.0],
             ['int',       10000000000000000000000],
             ['enum',      'mango', 'fruit'],
+            ['bool',      'true'],
+            ['bool',      'false'],
             ['DateTime',  new \stdClass],
             ['\DateTime', new \stdClass],
         ];

@@ -118,7 +118,7 @@ trait TypeAssert
             throw new InvalidArgumentException(self::message($class, $value, $name));
         }
     }
-    
+
     /**
      * @param  string      $expected_type
      * @param  mixed       $value
