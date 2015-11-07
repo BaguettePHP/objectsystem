@@ -25,6 +25,9 @@ Features
   * `trait TypedProperty`
   * `trait TypeAssert`
   * `class TypeDefinision`
+* Object container
+  * `class ObjectArray`
+  * `interface ToArrayInterface`
 
 References
 ----------
