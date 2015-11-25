@@ -36,4 +36,26 @@ final class TypeDefinitionTest extends \Teto\TestCase
             ['?string[5]', 'string', true,  true,  5],
         ];
     }
+
+    /**
+     * @dataProvider dataProviderFor_test_assertValue_throwsException
+     */
+    public function test_assertValue_throwsException($def, $expected_exception)
+    {
+        $this->setExpectedException($expected_exception);
+
+        $actual = TypeDefinition::parse($def);
+    }
+
+    public function dataProviderFor_test_assertValue_throwsException()
+    {
+        // def * expected
+        return [
+            ['',         '\LogicException'],
+            ['?',        '\LogicException'],
+            ['[]',       '\LogicException'],
+            ['[5]',      '\LogicException'],
+            ['string[5', '\LogicException'],
+        ];
+    }
 }
