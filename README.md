@@ -2,7 +2,7 @@ Teto Objectsystem
 =================
 
 [![Package version](http://img.shields.io/packagist/v/zonuexe/objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
-[![Build Status](https://travis-ci.org/BaguettePHP/php-objectsystem.svg?branch=master)](https://travis-ci.org/BaguettePHP/php-objectsystem)
+[![Build Status](https://travis-ci.org/BaguettePHP/objectsystem.svg?branch=master)](https://travis-ci.org/BaguettePHP/objectsystem)
 [![Packagist](http://img.shields.io/packagist/dt/zonuexe/objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
 
 Object system implementation for PHP
