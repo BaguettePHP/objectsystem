@@ -32,14 +32,15 @@ final class TypeDefinition
     public function __construct() {}
 
     /**
-     * @param  string
+     * @param  string $def Type definition
+     * @return TypeDefinition
      */
-    public static function parse($str)
+    public static function parse($def)
     {
         $type = new TypeDefinition;
 
         static $re_parse_prop = '/^(\??)([^\s\[\]]+)((?:\[(\d*)\])?)$/';
-        preg_match($re_parse_prop, $str, $matches);
+        preg_match($re_parse_prop, $def, $matches);
 
         if (empty($matches[2])) {
             throw new \LogicException();
