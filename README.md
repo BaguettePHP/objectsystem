@@ -28,6 +28,9 @@ Features
 * Object container
   * `class ObjectArray`
   * `interface ToArrayInterface`
+* Trait for general class
+  * `trait PrivateGetter`: Private property behaves like read only.
+    * This trait is very simple, but you may not be able to imagine the behavior of this trait in the inherited class.
 
 References
 ----------
