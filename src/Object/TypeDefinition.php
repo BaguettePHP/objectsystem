@@ -39,8 +39,7 @@ final class TypeDefinition
     {
         $type = new TypeDefinition;
 
-        static $re_parse_prop = '/^(\??)([^\s\[\]]+)((?:\[(\d*)\])?)$/';
-        preg_match($re_parse_prop, $def, $matches);
+        preg_match(self::RE_PROPERTY, $def, $matches);
 
         if (empty($matches[2])) {
             throw new \LogicException();
@@ -54,6 +53,7 @@ final class TypeDefinition
 
         return $type;
     }
+    const RE_PROPERTY = '/^(\??)([^\s\[\]]+)((?:\[(\d*)\])?)$/';
 
     /**
      * @throws \OutOfRangeException
