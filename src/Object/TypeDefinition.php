@@ -53,7 +53,7 @@ final class TypeDefinition
 
         return $type;
     }
-    const RE_PROPERTY = '/^(\??)([^\s\[\]]+)((?:\[(\d*)\])?)$/';
+    const RE_PROPERTY = '/^(\??)([^\s\[\]?]+)((?:\[(\d*)\])?)$/';
 
     /**
      * @throws \OutOfRangeException
