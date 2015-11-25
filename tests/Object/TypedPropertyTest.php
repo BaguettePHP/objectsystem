@@ -76,24 +76,25 @@ final class TypedPropertyTest extends \Teto\TestCase
 
     /**
      * @dataProvider dataProviderFor_test_set_raise_InvalidArgumentException
-     * @expectedException \InvalidArgumentException
      */
-    public function test_set_raise_InvalidArgumentException($name, $value)
+    public function test_set_raise_InvalidArgumentException($name, $value, $expected_exception)
     {
+        $this->setExpectedException($expected_exception);
+
         $actual = new TypedPropertyTestClass;
         $actual->$name = $value;
     }
-    
+
     public function dataProviderFor_test_set_raise_InvalidArgumentException()
     {
         return [
-            ['int_val',    null],
-            ['int_val',    '12345'],
-            ['int_val',    []],
-            ['int_val_a',  [12345, null]],
-            ['int_val_na', 12345],
-            ['string_val', 12345],
-            ['string_val', ['12345']],
+            ['int_val',    null,            '\InvalidArgumentException'],
+            ['int_val',    '12345',         '\InvalidArgumentException'],
+            ['int_val',    [],              '\InvalidArgumentException'],
+            ['int_val_a',  [12345, null],   '\InvalidArgumentException'],
+            ['int_val_na', 12345,           '\InvalidArgumentException'],
+            ['string_val', 12345,           '\InvalidArgumentException'],
+            ['string_val', ['12345'],       '\InvalidArgumentException'],
         ];
     }
 }
