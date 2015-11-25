@@ -22,6 +22,7 @@ final class TypedPropertyTestClass
     private static $property_types = [
         'int_val'    => 'int',
         'int_val_a'  => 'int[]',
+        'int_val_a2' => 'int[2]',
         'int_val_n'  => '?int',
         'int_val_na' => '?int[]',
         'string_val' => 'string',
@@ -61,6 +62,7 @@ final class TypedPropertyTest extends \Teto\TestCase
             ['int_val_a',  []],
             ['int_val_a',  [12345]],
             ['int_val_a',  [12345, 3939]],
+            ['int_val_a2', [0410, 1010]],
             ['int_val_a',  new ArrayIterator([12345, 3939])],
             ['int_val_n',  12345],
             ['int_val_n',  null],
@@ -95,6 +97,11 @@ final class TypedPropertyTest extends \Teto\TestCase
             ['int_val_na', 12345,           '\InvalidArgumentException'],
             ['string_val', 12345,           '\InvalidArgumentException'],
             ['string_val', ['12345'],       '\InvalidArgumentException'],
+
+            ['int_val_a2', [],              '\RangeException'],
+            ['int_val_a2', [1010],          '\RangeException'],
+
+            ['undef', ["It's undefined"],   '\OutOfRangeException'],
         ];
     }
 }

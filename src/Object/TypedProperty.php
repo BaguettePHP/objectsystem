@@ -24,8 +24,9 @@ trait TypedProperty
      *
      * @param  string $name
      * @param  mixed  $value
-     * @throws OutOfRangeException
-     * @throws InvalidArgumentException
+     * @throws \OutOfRangeException      If you set to undefined property
+     * @throws \InvalidArgumentException If differed from the defined type
+     * @throws \RangeException           If differed from the defined length
      * @link   http://php.net/manual/language.oop5.magic.php
      */
     public function __set($name, $value)
@@ -35,7 +36,7 @@ trait TypedProperty
         }
 
         $type = TypeDefinition::parse(self::$property_types[$name]);
-        
+
         if ($type->is_array) {
             self::assertArrayOrObject($value);
             $values = $value;
@@ -46,8 +47,8 @@ trait TypedProperty
         foreach ($values as $v) {
             self::assertValue($type->expected, $name, $v, $type->is_nullable);
         }
-        if ($type->len !== null) {
-            ValidationHelper::assertCount($type->len, $value);
+        if ($type->len !== null && count($value) !== $type->len) {
+            throw new \RangeException("Unexpected length:{$name} (expects {$type->len})");
         }
 
         $this->properties[$name] = $value;
