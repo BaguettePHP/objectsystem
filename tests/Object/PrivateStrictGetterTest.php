@@ -102,7 +102,7 @@ class PrivateStrictGetterTest extends \Teto\TestCase
     {
         $this->setExpectedException($expected_exception);
 
-        $_ = $subject->name;
+        $_ = $subject->$name;
     }
 
     public function dataProviderFor_test_raiseException()
