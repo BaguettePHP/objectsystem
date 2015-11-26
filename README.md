@@ -30,7 +30,10 @@ Features
   * `interface ToArrayInterface`
 * Trait for general class
   * `trait PrivateGetter`: Private property behaves like read only.
-    * This trait is very simple, but you may not be able to imagine the behavior of this trait in the inherited class.
+    * Very simple, but you may not be able to imagine the behavior of trait in the inherited class.
+    * Behavior of undefined property depends on [error_reporting()](http://php.net/manual/function.error-reporting.php) and [set_error_handler()](http://php.net/manual/function.set-error-handler.php).
+  * `trait PrivateStrictGetter`: Private property behaves like read only.
+    * Throws `OutOfRangeException` if propery is undefined.
 
 References
 ----------
