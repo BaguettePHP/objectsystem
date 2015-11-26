@@ -90,7 +90,7 @@ class PrivateStrictGetterTest extends \Teto\TestCase
     {
         return [
             [new PrivateStrictGetterTestObject,           []],
-            [new PrivateStrictGetterInteritedTestObject1, ['c' => 'C1', 'd' => 'D1', 'e' => 'E1']],
+            [new PrivateStrictGetterInteritedTestObject1, ['c' => 'C1', 'd' => 'D1', 'e' => 'E1', 'z' => 'Z']],
             [new PrivateStrictGetterInteritedTestObject2, ['a' => 'A2', 'b' => 'B2', 'e' => 'E2']],
         ];
     }
@@ -108,14 +108,16 @@ class PrivateStrictGetterTest extends \Teto\TestCase
     public function dataProviderFor_test_raiseException()
     {
         return [
-            [new PrivateStrictGetterTestObject,           '\OutOfRangeException', 'x'],
-            [new PrivateStrictGetterTestObject,           '\OutOfRangeException', 'y'],
-            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'x'],
-            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'y'],
-            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'z'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'x'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'y'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'z'],
+            [new PrivateStrictGetterTestObject,           '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterTestObject,           '\PHPUnit_Framework_Error', 'x'],
+            [new PrivateStrictGetterTestObject,           '\PHPUnit_Framework_Error', 'y'],
+            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException',     'x'],
+            [new PrivateStrictGetterInteritedTestObject1, '\PHPUnit_Framework_Error', 'y'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'x'],
+            [new PrivateStrictGetterInteritedTestObject2, '\PHPUnit_Framework_Error', 'y'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'z'],
         ];
     }
 }
