@@ -14,7 +14,7 @@ namespace Teto\Object;
  * @copyright  2015 USAMI Kenta
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  */
-trait PrivateGetter
+trait PrivateStrictGetter
 {
     public function __get($name)
     {

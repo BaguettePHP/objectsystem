@@ -8,9 +8,9 @@ namespace Teto\Object;
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
  */
-class PrivateGetterTestObject
+class PrivateStrictGetterTestObject
 {
-    use PrivateGetter;
+    use PrivateStrictGetter;
 
     private $a = 'A';
     private $b;
@@ -30,7 +30,7 @@ class PrivateGetterTestObject
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
  */
-class PrivateGetterInteritedTestObject1 extends PrivateGetterTestObject
+class PrivateStrictGetterInteritedTestObject1 extends PrivateStrictGetterTestObject
 {
     private $a = 'A1';
     private $b = 'B1';
@@ -46,9 +46,9 @@ class PrivateGetterInteritedTestObject1 extends PrivateGetterTestObject
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
  */
-class PrivateGetterInteritedTestObject2 extends PrivateGetterTestObject
+class PrivateStrictGetterInteritedTestObject2 extends PrivateStrictGetterTestObject
 {
-    use PrivateGetter;
+    use PrivateStrictGetter;
 
     private $a = 'A2';
     private $b = 'B2';
@@ -62,7 +62,7 @@ class PrivateGetterInteritedTestObject2 extends PrivateGetterTestObject
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
  */
-class PrivateGetterTest extends \Teto\TestCase
+class PrivateStrictGetterTest extends \Teto\TestCase
 {
     /**
      * @dataProvider dataProviderFor_test
@@ -89,9 +89,9 @@ class PrivateGetterTest extends \Teto\TestCase
     public function dataProviderFor_test()
     {
         return [
-            [new PrivateGetterTestObject,           []],
-            [new PrivateGetterInteritedTestObject1, ['c' => 'C1', 'd' => 'D1', 'e' => 'E1']],
-            [new PrivateGetterInteritedTestObject2, ['a' => 'A2', 'b' => 'B2', 'e' => 'E2']],
+            [new PrivateStrictGetterTestObject,           []],
+            [new PrivateStrictGetterInteritedTestObject1, ['c' => 'C1', 'd' => 'D1', 'e' => 'E1']],
+            [new PrivateStrictGetterInteritedTestObject2, ['a' => 'A2', 'b' => 'B2', 'e' => 'E2']],
         ];
     }
 
@@ -108,14 +108,14 @@ class PrivateGetterTest extends \Teto\TestCase
     public function dataProviderFor_test_raiseException()
     {
         return [
-            [new PrivateGetterTestObject,           '\OutOfRangeException', 'x'],
-            [new PrivateGetterTestObject,           '\OutOfRangeException', 'y'],
-            [new PrivateGetterInteritedTestObject1, '\OutOfRangeException', 'x'],
-            [new PrivateGetterInteritedTestObject1, '\OutOfRangeException', 'y'],
-            [new PrivateGetterInteritedTestObject1, '\OutOfRangeException', 'z'],
-            [new PrivateGetterInteritedTestObject2, '\OutOfRangeException', 'x'],
-            [new PrivateGetterInteritedTestObject2, '\OutOfRangeException', 'y'],
-            [new PrivateGetterInteritedTestObject2, '\OutOfRangeException', 'z'],
+            [new PrivateStrictGetterTestObject,           '\OutOfRangeException', 'x'],
+            [new PrivateStrictGetterTestObject,           '\OutOfRangeException', 'y'],
+            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'x'],
+            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'y'],
+            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException', 'z'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'x'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'y'],
+            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException', 'z'],
         ];
     }
 }
