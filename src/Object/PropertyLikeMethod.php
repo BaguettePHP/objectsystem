@@ -10,7 +10,7 @@ namespace Teto\Object;
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @author     USAMI Kenta <tadsan@zonu.me>
  */
-trait PropertyLikeMethods
+trait PropertyLikeMethod
 {
     /**
      * Call method as property (magic method)

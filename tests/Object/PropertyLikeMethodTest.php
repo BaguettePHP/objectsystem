@@ -10,7 +10,7 @@ namespace Teto\Object;
  */
 class PropertyLikeMethodsTestModel
 {
-    use PropertyLikeMethods;
+    use PropertyLikeMethod;
 
     private $string;
 
