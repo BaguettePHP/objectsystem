@@ -29,15 +29,14 @@ Features
   * `class ObjectArray`
   * `interface ToArrayInterface`
 * Trait for general class
+  * `trait ReadOnly`: Restrict write to not accessable property.
   * `trait PrivateGetter`: Private property behaves like read only.
     * Very simple, but you may not be able to imagine the behavior of trait in the inherited class.
     * Behavior of undefined property depends on [error_reporting()](http://php.net/manual/function.error-reporting.php) and [set_error_handler()](http://php.net/manual/function.set-error-handler.php).
   * `trait PrivateStrictGetter`: Private property behaves like read only.
     * Throws `OutOfRangeException` if propery is undefined.
-  * `trait MethodAlias`
-    * Make alias of method.
-  * `trait PropertyLikeMethod`
-    * Call method as property.
+  * `trait MethodAlias`: Make alias of method.
+  * `trait PropertyLikeMethod`: Call method as property.
 
 References
 ----------
