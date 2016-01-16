@@ -23,5 +23,8 @@
         "psr-4": {
             "Teto\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
     }
 }
