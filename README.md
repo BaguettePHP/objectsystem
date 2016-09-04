@@ -4,10 +4,15 @@ Teto Objectsystem
 [![Package version](http://img.shields.io/packagist/v/zonuexe/objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
 [![Build Status](https://travis-ci.org/BaguettePHP/objectsystem.svg?branch=master)](https://travis-ci.org/BaguettePHP/objectsystem)
 [![Packagist](http://img.shields.io/packagist/dt/zonuexe/objectsystem.svg?style=flat)](https://packagist.org/packages/zonuexe/objectsystem)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BaguettePHP/objectsystem/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BaguettePHP/objectsystem/?branch=master)
 
 Object system implementation for PHP
 
-see `poem.ja.md`.
+Document
+--------
+
+* in Japanese: [`TypedProperty`について](./poem.ja.md).
+* in Japanese: [private/protectedなプロパティを外部から読み込み可能にする - Qiita](http://qiita.com/tadsan/items/2049243e47495764b191)
 
 Installation
 ------------
