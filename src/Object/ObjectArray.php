@@ -23,19 +23,19 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
     }
 
     /**
-     * @param  ModelArray|object[] $objects
-     * @return ModelArray
+     * @param  ObjectArray|object[] $objects
+     * @return ObjectArray
      * @throws InvalidArgumentException
      */
     public static function fromArray($objects)
     {
-        if ($objects instanceof ModelArray) {
+        if ($objects instanceof ObjectArray) {
             return $objects;
         } elseif (!is_array($objects) && !$objects instanceof ToArrayInterface) {
             throw new \InvalidArgumentException;
         }
 
-        $model_array = new ModelArray;
+        $model_array = new ObjectArray;
         $model_array->objects = array_values($objects);
 
         return $model_array;
