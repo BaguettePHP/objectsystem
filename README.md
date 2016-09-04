@@ -49,7 +49,7 @@ Copyright
 see `./LICENSE`.
 
     Object system implementation for PHP
-    Copyright (c) 2014 USAMI Kenta <tadsan@zonu.me>
+    Copyright (c) 2016 [Baguette HQ](http://baguettephp.github.io/) / [USAMI Kenta](https://tadsan.github.io/) <tadsan@zonu.me>
 
 Teto Kasane
 -----------

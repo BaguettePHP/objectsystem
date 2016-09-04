@@ -1,9 +1,11 @@
 <?php
+
 namespace Teto;
 
 /**
+ * @package   Teto\Object\tests
  * @author    USAMI Kenta <tadsan@zonu.me>
- * @copyright 2014 USAMI Kenta
+ * @copyright 2016 Baguette HQ
  * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 abstract class TestCase extends \PHPUnit_Framework_TestCase
