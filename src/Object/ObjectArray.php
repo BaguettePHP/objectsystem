@@ -1,14 +1,13 @@
 <?php
+
 namespace Teto\Object;
 
 /**
  * Interface for array compatible object
  *
- * @package    Teto
- * @subpackage Object
- * @author     USAMI Kenta <tadsan@zonu.me>
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArrayInterface
 {
@@ -98,7 +97,7 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
 
     /**
      * @param  mixed offset
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {

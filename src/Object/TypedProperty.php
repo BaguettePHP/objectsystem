@@ -1,16 +1,13 @@
 <?php
+
 namespace Teto\Object;
-use InvalidArgumentException;
-use OutOfRangeException;
 
 /**
  * Typed property function for class
  *
- * @package    Teto
- * @subpackage Object
- * @copyright  2014 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 trait TypedProperty
 {
@@ -27,7 +24,7 @@ trait TypedProperty
      * @throws \OutOfRangeException      If you set to undefined property
      * @throws \InvalidArgumentException If differed from the defined type
      * @throws \RangeException           If differed from the defined length
-     * @link   http://php.net/manual/language.oop5.magic.php
+     * @see    http://php.net/manual/language.oop5.magic.php
      */
     public function __set($name, $value)
     {
@@ -59,7 +56,7 @@ trait TypedProperty
      *
      * @param  string $name
      * @return mixed
-     * @link   http://php.net/manual/language.oop5.magic.php
+     * @see    http://php.net/manual/language.oop5.magic.php
      */
     public function __get($name)
     {
@@ -71,8 +68,9 @@ trait TypedProperty
     }
 
     /**
-     * @return boolean
-     * @link   http://php.net/manual/language.oop5.magic.php
+     * @param  string $name
+     * @return bool
+     * @see    http://php.net/manual/language.oop5.magic.php
      */
     public function __isset($name)
     {
@@ -80,7 +78,8 @@ trait TypedProperty
     }
 
     /**
-     * @link http://php.net/manual/language.oop5.magic.php
+     * @param string $name
+     * @see   http://php.net/manual/language.oop5.magic.php
      */
     public function __unset($name)
     {

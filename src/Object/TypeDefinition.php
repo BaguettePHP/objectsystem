@@ -4,15 +4,13 @@ namespace Teto\Object;
 /**
  * Type Definition syntax
  *
- * @package    Teto
- * @subpackage Object
- * @copyright  2014 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  *
  * @property-read string   $expected
- * @property-read boolean  $is_nullable
- * @property-read boolean  $is_array
+ * @property-read bool     $is_nullable
+ * @property-read bool     $is_array
  * @property-read int|null $len
  */
 final class TypeDefinition
@@ -20,10 +18,10 @@ final class TypeDefinition
     /** @var string */
     private $expected;
 
-    /** @var boolean */
+    /** @var bool */
     private $is_nullable;
 
-    /** @var boolean */
+    /** @var bool */
     private $is_array;
 
     /** @var int|null */

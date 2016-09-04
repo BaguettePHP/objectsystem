@@ -4,11 +4,9 @@ namespace Teto\Object;
 /**
  * Make Property like method
  *
- * @package    Teto
- * @subpackage Object
- * @copyright  2014 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 trait MethodAlias
 {
@@ -17,7 +15,7 @@ trait MethodAlias
      *
      * @param  string $name
      * @return mixed
-     * @link   http://php.net/manual/language.oop5.magic.php
+     * @see    http://php.net/manual/language.oop5.magic.php
      */
     public function __call($name, array $args)
     {

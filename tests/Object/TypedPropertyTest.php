@@ -1,13 +1,12 @@
 <?php
+
 namespace Teto\Object;
-use ArrayIterator;
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2014 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  *
  * @property int          $int_val
  * @property int[]        $inv_val_a
@@ -30,11 +29,10 @@ final class TypedPropertyTestClass
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2014 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 final class TypedPropertyTest extends \Teto\TestCase
 {
@@ -63,7 +61,7 @@ final class TypedPropertyTest extends \Teto\TestCase
             ['int_val_a',  [12345]],
             ['int_val_a',  [12345, 3939]],
             ['int_val_a2', [0410, 1010]],
-            ['int_val_a',  new ArrayIterator([12345, 3939])],
+            ['int_val_a',  new \ArrayIterator([12345, 3939])],
             ['int_val_n',  12345],
             ['int_val_n',  null],
             ['int_val_na', [12345]],
