@@ -1,14 +1,14 @@
 <?php
+
 namespace Teto\Object;
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
-class ObjectArrayTestModel implements ToArrayInterface
+final class ObjectArrayTestModel implements ToArrayInterface
 {
     private $array = [];
 
@@ -24,11 +24,10 @@ class ObjectArrayTestModel implements ToArrayInterface
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class ObjectArrayTest extends \Teto\TestCase
 {

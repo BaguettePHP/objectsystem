@@ -1,12 +1,12 @@
 <?php
+
 namespace Teto\Object;
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class ReadOnlyTestObject
 {
@@ -18,11 +18,10 @@ class ReadOnlyTestObject
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class ReadOnlyTest extends \Teto\TestCase
 {

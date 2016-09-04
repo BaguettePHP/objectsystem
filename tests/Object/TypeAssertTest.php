@@ -2,8 +2,6 @@
 
 namespace Teto\Object;
 
-use Teto\Object\TypeAssertTestClass as test;
-
 /**
  * @package   Teto\Object\tests
  * @author    USAMI Kenta <tadsan@zonu.me>
@@ -37,7 +35,7 @@ final class TypeAssertTest extends \Teto\TestCase
      */
     public function test_assertValue_success($expected_type, $value, $name = 'var')
     {
-        test::assertValue($expected_type, $name, $value, false);
+        TypeAssertTestClass::assertValue($expected_type, $name, $value, false);
     }
 
     public function dataProviderFor_test_assertValue_success()
@@ -77,7 +75,7 @@ final class TypeAssertTest extends \Teto\TestCase
 
         $this->setExpectedExceptionRegExp('InvalidArgumentException', $msg);
 
-        test::assertValue($expected_type, $name, $value, false);
+        TypeAssertTestClass::assertValue($expected_type, $name, $value, false);
     }
 
     public function dataProviderFor_test_assertValue_raise_InvalidArgumentException()
@@ -108,8 +106,8 @@ final class TypeAssertTest extends \Teto\TestCase
             $this->setExpectedExceptionRegExp('InvalidArgumentException', $msg);
         }
 
-        test::assertInt($num);
-        test::assertValue('int', 'IntVal', $num, false);
+        TypeAssertTestClass::assertInt($num);
+        TypeAssertTestClass::assertValue('int', 'IntVal', $num, false);
     }
 
     public function dataProviderFor_test_assertInt()

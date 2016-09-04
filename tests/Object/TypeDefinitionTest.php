@@ -1,6 +1,6 @@
 <?php
+
 namespace Teto\Object;
-use Teto\Object\TypeAssertTestClass as test;
 
 /**
  * @package   Teto\Object\tests

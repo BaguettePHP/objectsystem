@@ -1,12 +1,12 @@
 <?php
+
 namespace Teto\Object;
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class PrivateStrictGetterTestObject
 {
@@ -24,11 +24,10 @@ class PrivateStrictGetterTestObject
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class PrivateStrictGetterInteritedTestObject1 extends PrivateStrictGetterTestObject
 {
@@ -40,11 +39,10 @@ class PrivateStrictGetterInteritedTestObject1 extends PrivateStrictGetterTestObj
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class PrivateStrictGetterInteritedTestObject2 extends PrivateStrictGetterTestObject
 {
@@ -56,11 +54,10 @@ class PrivateStrictGetterInteritedTestObject2 extends PrivateStrictGetterTestObj
 }
 
 /**
- * @package    Teto
- * @subpackage Object
- * @copyright  2015 USAMI Kenta
- * @license    http://www.apache.org/licenses/LICENSE-2.0
- * @author     USAMI Kenta <tadsan@zonu.me>
+ * @package   Teto\Object\tests
+ * @author    USAMI Kenta <tadsan@zonu.me>
+ * @copyright 2016 Baguette HQ
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
 class PrivateStrictGetterTest extends \Teto\TestCase
 {
