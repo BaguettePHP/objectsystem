@@ -23,9 +23,7 @@
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Teto\\": "tests/"
-        }
+        "classmap": ["tests/"]
     },
     "scripts": {
         "test": "./vendor/bin/phpunit"
