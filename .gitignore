@@ -1,3 +1,4 @@
+/bin/apigen
 /build/logs
 /build/phpdox
 /build/phploc
@@ -7,3 +8,4 @@
 /vendor/*
 /.idea
 /*.iml
+/.env
