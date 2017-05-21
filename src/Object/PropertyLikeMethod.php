@@ -16,6 +16,7 @@ trait PropertyLikeMethod
      * @param  string $name
      * @return mixed
      * @see    http://php.net/manual/language.oop5.magic.php
+     * @suppress PhanUndeclaredStaticProperty
      */
     public function __get($name)
     {

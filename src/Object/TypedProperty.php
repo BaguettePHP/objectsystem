@@ -25,6 +25,7 @@ trait TypedProperty
      * @throws \InvalidArgumentException If differed from the defined type
      * @throws \RangeException           If differed from the defined length
      * @see    http://php.net/manual/language.oop5.magic.php
+     * @suppress PhanUndeclaredStaticProperty
      */
     public function __set($name, $value)
     {
@@ -57,6 +58,7 @@ trait TypedProperty
      * @param  string $name
      * @return mixed
      * @see    http://php.net/manual/language.oop5.magic.php
+     * @suppress PhanUndeclaredStaticProperty
      */
     public function __get($name)
     {
@@ -80,6 +82,7 @@ trait TypedProperty
     /**
      * @param string $name
      * @see   http://php.net/manual/language.oop5.magic.php
+     * @suppress PhanUndeclaredStaticProperty
      */
     public function __unset($name)
     {
@@ -90,6 +93,7 @@ trait TypedProperty
 
     /**
      * @param array
+     * @suppress PhanUndeclaredStaticProperty
      */
     private function setProperties(array $properties)
     {

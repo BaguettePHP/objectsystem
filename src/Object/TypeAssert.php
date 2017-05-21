@@ -20,6 +20,7 @@ trait TypeAssert
      * @param bool   $is_nullable
      * @throws \LogicException
      * @throws \InvalidArgumentException
+     * @suppress PhanUndeclaredStaticProperty
      */
     protected static function assertValue($expected_type, $name, $value, $is_nullable)
     {
