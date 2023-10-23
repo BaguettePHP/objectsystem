@@ -8,7 +8,7 @@ namespace Teto;
  * @copyright 2016 Baguette HQ
  * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
-abstract class TestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * @param  string|array $class_method "Klass::method_name"
