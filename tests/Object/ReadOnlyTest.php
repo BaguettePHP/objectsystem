@@ -10,7 +10,7 @@ namespace Teto\Object;
  */
 class ReadOnlyTestObject
 {
-    use ReadOnly;
+    use ReadOnlyTrait;
 
     public    $public    = 'PubliC';
     protected $protected = 'ProtecteD';

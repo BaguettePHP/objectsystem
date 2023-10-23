@@ -11,7 +11,7 @@ namespace Teto\Object;
  * @copyright 2016 Baguette HQ
  * @license   http://www.apache.org/licenses/LICENSE-2.0
  */
-trait ReadOnly
+trait ReadOnlyTrait
 {
     public function __set($name, $_value)
     {
