@@ -19,10 +19,10 @@ final class TypedPropertyTestClass
     use TypedProperty;
 
     private static $property_types = [
-        'int_val'    => 'int',
-        'int_val_a'  => 'int[]',
+        'int_val' => 'int',
+        'int_val_a' => 'int[]',
         'int_val_a2' => 'int[2]',
-        'int_val_n'  => '?int',
+        'int_val_n' => '?int',
         'int_val_na' => '?int[]',
         'string_val' => 'string',
     ];
@@ -41,7 +41,7 @@ final class TypedPropertyTest extends \Teto\TestCase
      */
     public function test($name, $value)
     {
-        $actual = new TypedPropertyTestClass;
+        $actual = new TypedPropertyTestClass();
         $this->assertNull($actual->$name);
         $this->assertEmpty($actual->$name);
         $this->assertFalse(isset($actual->$name));
@@ -79,9 +79,9 @@ final class TypedPropertyTest extends \Teto\TestCase
      */
     public function test_set_raise_InvalidArgumentException($name, $value, $expected_exception)
     {
-        $this->setExpectedException($expected_exception);
+        $this->expectException($expected_exception);
 
-        $actual = new TypedPropertyTestClass;
+        $actual = new TypedPropertyTestClass();
         $actual->$name = $value;
     }
 

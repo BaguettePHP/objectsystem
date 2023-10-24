@@ -1,5 +1,10 @@
 <?php
+
 namespace Teto\Object;
+
+use function is_numeric;
+use function preg_match;
+use function property_exists;
 
 /**
  * Type Definition syntax
@@ -15,19 +20,29 @@ namespace Teto\Object;
  */
 final class TypeDefinition
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $expected;
 
-    /** @var bool */
+    /**
+     * @var bool
+     */
     private $is_nullable;
 
-    /** @var bool */
+    /**
+     * @var bool
+     */
     private $is_array;
 
-    /** @var int|null */
+    /**
+     * @var int|null
+     */
     private $len;
 
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 
     /**
      * @param  string $def Type definition
@@ -35,7 +50,7 @@ final class TypeDefinition
      */
     public static function parse($def)
     {
-        $type = new TypeDefinition;
+        $type = new TypeDefinition();
 
         preg_match(self::RE_PROPERTY, $def, $matches);
 
@@ -43,15 +58,16 @@ final class TypeDefinition
             throw new \LogicException();
         }
         $type->is_nullable = !empty($matches[1]);
-        $type->expected    = $matches[2];
-        $type->is_array    = !empty($matches[3]);
+        $type->expected = $matches[2];
+        $type->is_array = !empty($matches[3]);
         if (isset($matches[4]) && is_numeric($matches[4])) {
-            $type->len = (int)$matches[4];
+            $type->len = (int) $matches[4];
         }
 
         return $type;
     }
-    const RE_PROPERTY = '/^(\??)([^\s\[\]?]+)((?:\[(\d*)\])?)$/';
+
+    public const RE_PROPERTY = '/^(\??)([^\s\[\]?]+)((?:\[(\d*)\])?)$/';
 
     /**
      * @throws \OutOfRangeException
@@ -62,6 +78,6 @@ final class TypeDefinition
             return $this->$name;
         }
 
-        throw new \OutOfRangeException;
+        throw new \OutOfRangeException();
     }
 }

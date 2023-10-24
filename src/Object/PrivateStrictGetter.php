@@ -2,6 +2,8 @@
 
 namespace Teto\Object;
 
+use function property_exists;
+
 /**
  * Private property behaves like read only.
  *

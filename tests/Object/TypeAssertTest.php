@@ -2,6 +2,8 @@
 
 namespace Teto\Object;
 
+use function call_user_func_array;
+
 /**
  * @package   Teto\Object\tests
  * @author    USAMI Kenta <tadsan@zonu.me>
@@ -18,7 +20,7 @@ final class TypeAssertTestClass
 
     public static function __callStatic($name, array $arguments)
     {
-        return call_user_func_array("self::$name", $arguments);
+        return call_user_func_array([__CLASS__, $name], $arguments);
     }
 }
 
@@ -36,6 +38,8 @@ final class TypeAssertTest extends \Teto\TestCase
     public function test_assertValue_success($expected_type, $value, $name = 'var')
     {
         TypeAssertTestClass::assertValue($expected_type, $name, $value, false);
+
+        $this->assertTrue(true, 'passed');
     }
 
     public function dataProviderFor_test_assertValue_success()
@@ -50,12 +54,13 @@ final class TypeAssertTest extends \Teto\TestCase
             ['enum',      'apple', 'fruit'],
             ['bool',      true],
             ['bool',      false],
-            ['callable',  function(){} ],
+            ['callable',  function () {
+            }],
             ['callable',  [dir('.'), 'close']],
             ['callable',  'Datetime::createFromFormat'],
-            ['object',    new \stdClass],
-            ['stdClass',  new \stdClass],
-            ['\stdClass', new \stdClass],
+            ['object',    new \stdClass()],
+            ['stdClass',  new \stdClass()],
+            ['\stdClass', new \stdClass()],
         ];
     }
 
@@ -64,7 +69,7 @@ final class TypeAssertTest extends \Teto\TestCase
      */
     public function test_assertValue_raise_InvalidArgumentException($expected_type, $value, $name = null)
     {
-        $name = str_replace('\\', '', $name ?: "not${expected_type}Val");
+        $name = str_replace('\\', '', $name ?: "not{$expected_type}Val");
         $expected_type = str_replace('\\', '', $expected_type);
 
         if ($expected_type === 'enum') {
@@ -73,9 +78,12 @@ final class TypeAssertTest extends \Teto\TestCase
             $msg = "/got \\$$name as .+ \(expects $expected_type\)/";
         }
 
-        $this->setExpectedExceptionRegExp('InvalidArgumentException', $msg);
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessageMatches($msg);
 
         TypeAssertTestClass::assertValue($expected_type, $name, $value, false);
+
+        $this->assertTrue(true, 'passed');
     }
 
     public function dataProviderFor_test_assertValue_raise_InvalidArgumentException()
@@ -91,8 +99,8 @@ final class TypeAssertTest extends \Teto\TestCase
             ['enum',      'mango', 'fruit'],
             ['bool',      'true'],
             ['bool',      'false'],
-            ['DateTime',  new \stdClass],
-            ['\DateTime', new \stdClass],
+            ['DateTime',  new \stdClass()],
+            ['\DateTime', new \stdClass()],
         ];
     }
 
@@ -102,12 +110,14 @@ final class TypeAssertTest extends \Teto\TestCase
     public function test_assertInt($num, $raise_error = false)
     {
         if ($raise_error) {
-            $msg = '/got \\$.+ \(expects int\)/';
-            $this->setExpectedExceptionRegExp('InvalidArgumentException', $msg);
+            $this->expectException(\InvalidArgumentException::class);
+            $this->expectExceptionMessageMatches('/got \\$.+ \(expects int\)/');
         }
 
         TypeAssertTestClass::assertInt($num);
         TypeAssertTestClass::assertValue('int', 'IntVal', $num, false);
+
+        $this->assertTrue(true, 'passed');
     }
 
     public function dataProviderFor_test_assertInt()

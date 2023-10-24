@@ -34,7 +34,7 @@ class ObjectArrayTest extends \Teto\TestCase
     /**
      * @dataProvider objectArrayProvider
      */
-    public function test($objects, $expected)
+    public function test(ObjectArray $objects, array $expected)
     {
         $actual = $objects->toArray();
 
@@ -61,7 +61,7 @@ class ObjectArrayTest extends \Teto\TestCase
                     [4, 5, 6],
                     [7, 8, 9],
                 ],
-            ]
+            ],
         ];
     }
 }

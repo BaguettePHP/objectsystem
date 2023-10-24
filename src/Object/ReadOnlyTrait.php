@@ -2,6 +2,8 @@
 
 namespace Teto\Object;
 
+use function sprintf;
+
 /**
  * Restrict write to not accessable property.
  *

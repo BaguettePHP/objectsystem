@@ -2,6 +2,8 @@
 
 namespace Teto\Object;
 
+use function count;
+
 /**
  * Typed property function for class
  *
@@ -13,7 +15,9 @@ trait TypedProperty
 {
     use TypeAssert;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private $properties = [];
 
     /**

@@ -2,6 +2,21 @@
 
 namespace Teto\Object;
 
+use function function_exists;
+use function get_class;
+use function get_debug_type;
+use function gettype;
+use function in_array;
+use function is_array;
+use function is_bool;
+use function is_callable;
+use function is_float;
+use function is_int;
+use function is_object;
+use function is_resource;
+use function is_scalar;
+use function is_string;
+
 /**
  * Argument type assertion methods
  *
@@ -18,9 +33,6 @@ trait TypeAssert
      * @param string $name  Variable name (for error message)
      * @param mixed  $value Received value
      * @param bool   $is_nullable
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
-     * @suppress PhanUndeclaredStaticProperty
      */
     protected static function assertValue($expected_type, $name, $value, $is_nullable)
     {
@@ -37,16 +49,16 @@ trait TypeAssert
                 return;
             }
 
-            $expects = '['. implode(', ', self::$enum_values[$name]) . ']';
+            $expects = '[' . implode(', ', self::$enum_values[$name]) . ']';
             throw new \InvalidArgumentException(self::message($expects, $value, $name));
         } elseif (
-               ($expected_type === 'int'      && is_int($value))
-            || ($expected_type === 'string'   && is_string($value))
-            || ($expected_type === 'float'    && is_float($value))
-            || ($expected_type === 'array'    && is_array($value))
-            || ($expected_type === 'bool'     && is_bool($value))
-            || ($expected_type === 'object'   && is_object($value))
-            || ($expected_type === 'scalar'   && is_scalar($value))
+            ($expected_type === 'int' && is_int($value))
+            || ($expected_type === 'string' && is_string($value))
+            || ($expected_type === 'float' && is_float($value))
+            || ($expected_type === 'array' && is_array($value))
+            || ($expected_type === 'bool' && is_bool($value))
+            || ($expected_type === 'object' && is_object($value))
+            || ($expected_type === 'scalar' && is_scalar($value))
             || ($expected_type === 'callable' && is_callable($value))
             || ($expected_type === 'resource' && is_resource($value))
         ) {
@@ -124,9 +136,14 @@ trait TypeAssert
      */
     private static function message($expected_type, $value, $name)
     {
-        $type = is_object($value) ? get_class($value) : gettype($value);
+        if (function_exists('get_debug_type')) {
+            $type = get_debug_type($value);
+        } else {
+            $type = is_object($value) ? get_class($value) : gettype($value);
+        }
+
         $vars = ($name === null) ? $type : "$name as $type";
 
-        return "got \$$vars (expects $expected_type)";
+        return "got \${$vars} (expects {$expected_type})";
     }
 }

@@ -1,0 +1,1016 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Teto\\\\Object\\\\Helper\\:\\:toArray\\(\\) has parameter \\$is_toplevel with no type specified\\.$#"
+			count: 1
+			path: src/Object/Helper.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\Helper\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Object/Helper.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\Helper\\:\\:toArray\\(\\) should return array\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Object/Helper.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with \\*NEVER\\* will always evaluate to true\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Class Teto\\\\Object\\\\ObjectArray implements generic interface ArrayAccess but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Class Teto\\\\Object\\\\ObjectArray implements generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Instanceof between \\*NEVER\\* and Teto\\\\Object\\\\ToArrayInterface will always evaluate to false\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Instanceof between iterable\\<object\\>&Teto\\\\Object\\\\ObjectArray and Teto\\\\Object\\\\ObjectArray will always evaluate to true\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArray\\:\\:count\\(\\) should return int\\<1, max\\> but returns int\\<0, max\\>\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArray\\:\\:getIterator\\(\\) return type with generic class ArrayIterator does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArray\\:\\:getObjects\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArray\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArray\\:\\:toArrayRec\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(mixed offset\\)\\: Unexpected token \"offset\", expected variable at offset 25 on line 2$#"
+			count: 8
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(mixed value\\)\\: Unexpected token \"value\", expected variable at offset 53 on line 3$#"
+			count: 2
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(object\\)\\: Unexpected token \"\\\\n     \", expected variable at offset 24 on line 2$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^PHPDoc tag @throws with type Teto\\\\Object\\\\InvalidArgumentException is not subtype of Throwable$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^PHPDoc tag @throws with type Teto\\\\Object\\\\OutOfBoundsException is not subtype of Throwable$#"
+			count: 2
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of function array_key_exists expects int\\|string, mixed given\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Part \\$offset \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ObjectArray\\:\\:\\$objects has no type specified\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: src/Object/ObjectArray.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ToArrayInterface\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Object/ToArrayInterface.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinition\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Object/TypeDefinition.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinition\\:\\:__get\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: src/Object/TypeDefinition.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\HelperTest\\:\\:dataProviderFor_toArray\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/HelperTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\HelperTest\\:\\:test_toArray\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/HelperTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\HelperTest\\:\\:test_toArray\\(\\) has parameter \\$expected with no type specified\\.$#"
+			count: 1
+			path: tests/Object/HelperTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\HelperTest\\:\\:test_toArray\\(\\) has parameter \\$input with no type specified\\.$#"
+			count: 1
+			path: tests/Object/HelperTest.php
+
+		-
+			message: "#^Call to an undefined method Teto\\\\Object\\\\MethodAliasTestClass\\:\\:mlen\\(\\)\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Call to an undefined method Teto\\\\Object\\\\MethodAliasTestClass\\:\\:unknown\\(\\)\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\MethodAliasTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\MethodAliasTest\\:\\:test_raiseError\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\MethodAliasTestClass\\:\\:__call\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\MethodAliasTestClass\\:\\:__construct\\(\\) has parameter \\$string with no type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\MethodAliasTestClass\\:\\:mb_strlen\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func expects callable\\(\\)\\: mixed, array\\{\\$this\\(Teto\\\\Object\\\\MethodAliasTestClass\\), mixed\\} given\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\MethodAliasTestClass\\:\\:\\$method_aliases has no type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\MethodAliasTestClass\\:\\:\\$string has no type specified\\.$#"
+			count: 1
+			path: tests/Object/MethodAliasTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArrayTest\\:\\:objectArrayProvider\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArrayTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArrayTest\\:\\:test\\(\\) has parameter \\$expected with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArrayTestModel\\:\\:__construct\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ObjectArrayTestModel\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ObjectArrayTestModel\\:\\:\\$array has no type specified\\.$#"
+			count: 1
+			path: tests/Object/ObjectArrayTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:__get\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:__isset\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:dataProviderFor_test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:dataProviderFor_test_raiseException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test\\(\\) has parameter \\$diff with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test\\(\\) has parameter \\$subject with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test_raiseException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$expected_exception with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$subject with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:__get\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:__isset\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$a is never read, only written\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$b is never read, only written\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$c has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$d has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject1\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterInteritedTestObject2\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$c has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$d has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$f has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$x has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$y has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateGetterTestObject\\:\\:\\$z has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:__get\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:__isset\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:dataProviderFor_test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:dataProviderFor_test_raiseException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test\\(\\) has parameter \\$diff with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test\\(\\) has parameter \\$subject with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test_raiseException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$expected_exception with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTest\\:\\:test_raiseException\\(\\) has parameter \\$subject with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:__get\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:__isset\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$a is never read, only written\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$b is never read, only written\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$c has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$d has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject1\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterInteritedTestObject2\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$a has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$b has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$c has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$d has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$e has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$f has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$x has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$y has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PrivateStrictGetterTestObject\\:\\:\\$z has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PrivateStrictGetterTest.php
+
+		-
+			message: "#^Access to an undefined property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$len\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Access to an undefined property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$mb_strlen\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Access to an undefined property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$strlen\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Access to an undefined property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$unknown\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PropertyLikeMethodsTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PropertyLikeMethodsTest\\:\\:test_raiseError\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:__construct\\(\\) has parameter \\$string with no type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:mb_strlen\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:strlen\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func expects callable\\(\\)\\: mixed, array\\{\\$this\\(Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\), mixed\\} given\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$property_like_methods has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\PropertyLikeMethodsTestModel\\:\\:\\$string has no type specified\\.$#"
+			count: 1
+			path: tests/Object/PropertyLikeMethodTest.php
+
+		-
+			message: "#^Method PHPUnit\\\\Framework\\\\TestCase\\:\\:expectException\\(\\) invoked with 2 parameters, 1 required\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTest\\:\\:dataProvider_test_throws_OutOfRangeException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTest\\:\\:test_throws_OutOfRangeException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTest\\:\\:test_throws_OutOfRangeException\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:__set\\(\\) has parameter \\$_value with no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:__set\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:\\$private has no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:\\$private is never read, only written\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:\\$protected has no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\ReadOnlyTestObject\\:\\:\\$public has no type specified\\.$#"
+			count: 1
+			path: tests/Object/ReadOnlyTest.php
+
+		-
+			message: "#^Call to LogicException\\:\\:__construct\\(\\) on a separate line has no effect\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Call to method PHPUnit\\\\Framework\\\\Assert\\:\\:assertTrue\\(\\) with true and 'passed' will always evaluate to true\\.$#"
+			count: 3
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Call to protected static method assertInt\\(\\) of class Teto\\\\Object\\\\TypeAssertTestClass\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Call to protected static method assertValue\\(\\) of class Teto\\\\Object\\\\TypeAssertTestClass\\.$#"
+			count: 3
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:dataProviderFor_test_assertInt\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:dataProviderFor_test_assertValue_raise_InvalidArgumentException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:dataProviderFor_test_assertValue_success\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertInt\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertInt\\(\\) has parameter \\$num with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertInt\\(\\) has parameter \\$raise_error with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_raise_InvalidArgumentException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_raise_InvalidArgumentException\\(\\) has parameter \\$expected_type with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_raise_InvalidArgumentException\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_raise_InvalidArgumentException\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_success\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_success\\(\\) has parameter \\$expected_type with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_success\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTest\\:\\:test_assertValue_success\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:__callStatic\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:__callStatic\\(\\) has parameter \\$arguments with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:__callStatic\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:assertArrayOrObject\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:assertInstanceOf\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:assertInt\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:assertString\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeAssertTestClass\\:\\:assertValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func_array expects callable\\(\\)\\: mixed, array\\{'Teto\\\\\\\\Object\\\\\\\\TypeAssertTestClass', mixed\\} given\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\TypeAssertTestClass\\:\\:\\$enum_values has no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeAssertTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:dataProviderFor_test_assertValue_success\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:dataProviderFor_test_assertValue_throwsException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has parameter \\$def with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has parameter \\$expected with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has parameter \\$is_array with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has parameter \\$is_nullable with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_success\\(\\) has parameter \\$len with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_throwsException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_throwsException\\(\\) has parameter \\$def with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypeDefinitionTest\\:\\:test_assertValue_throwsException\\(\\) has parameter \\$expected_exception with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypeDefinitionTest.php
+
+		-
+			message: "#^Access to an undefined static property Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:\\$enum_values\\.$#"
+			count: 3
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Call to LogicException\\:\\:__construct\\(\\) on a separate line has no effect\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:dataProviderFor_test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:dataProviderFor_test_set_raise_InvalidArgumentException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test_set_raise_InvalidArgumentException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test_set_raise_InvalidArgumentException\\(\\) has parameter \\$expected_exception with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test_set_raise_InvalidArgumentException\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTest\\:\\:test_set_raise_InvalidArgumentException\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:assertArrayOrObject\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:assertInstanceOf\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:assertInt\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:assertString\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:assertValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:setProperties\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Method Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:setProperties\\(\\) has parameter \\$properties with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(array\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 23 on line 2$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:\\$properties type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Property Teto\\\\Object\\\\TypedPropertyTestClass\\:\\:\\$property_types has no type specified\\.$#"
+			count: 1
+			path: tests/Object/TypedPropertyTest.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with array will always evaluate to true\\.$#"
+			count: 1
+			path: tests/TestCase.php
+
+		-
+			message: "#^Method Teto\\\\TestCase\\:\\:getPrivateMethodAsPublic\\(\\) has parameter \\$class_method with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/TestCase.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrMethod of class ReflectionMethod constructor expects object\\|string, mixed given\\.$#"
+			count: 1
+			path: tests/TestCase.php
+
+		-
+			message: "#^Parameter \\#2 \\$method of class ReflectionMethod constructor expects string, mixed given\\.$#"
+			count: 1
+			path: tests/TestCase.php

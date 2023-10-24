@@ -1,5 +1,9 @@
 <?php
+
 namespace Teto\Object;
+
+use function call_user_func;
+use function in_array;
 
 /**
  * Make Property like method
@@ -21,7 +25,7 @@ trait MethodAlias
     public function __call($name, array $args)
     {
         if (!isset(self::$method_aliases)) {
-            throw new \LogicException(static::class.'::$method_aliases is not set.');
+            throw new \LogicException(static::class . '::$method_aliases is not set.');
         }
 
         if (isset(self::$method_aliases[$name])) {
@@ -29,7 +33,7 @@ trait MethodAlias
         } elseif (in_array($name, self::$method_aliases)) {
             $method = $name;
         } else {
-            throw new \BadMethodCallException(static::class."::{$name}() is not exists.");
+            throw new \BadMethodCallException(static::class . "::{$name}() is not exists.");
         }
 
         return call_user_func([$this, $method]);
