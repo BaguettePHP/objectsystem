@@ -1,0 +1,5 @@
+parameters:
+	paths:
+		- src
+	outputDir: '%workingDir%/docs'
+	title: "ξ ^ω^)ξ Teto PHP Objectsystem"
