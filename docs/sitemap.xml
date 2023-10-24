@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url><loc>index.html</loc></url>
+
+		<url><loc>tree.html</loc></url>
+
+			<url><loc>namespace-Teto.html</loc></url>
+			<url><loc>namespace-Teto.Object.html</loc></url>
+
+			<url><loc>Teto.Object.Helper.html</loc></url>
+			<url><loc>Teto.Object.MethodAlias.html</loc></url>
+			<url><loc>Teto.Object.ObjectArray.html</loc></url>
+			<url><loc>Teto.Object.PrivateGetter.html</loc></url>
+			<url><loc>Teto.Object.PrivateStrictGetter.html</loc></url>
+			<url><loc>Teto.Object.PropertyLikeMethod.html</loc></url>
+			<url><loc>Teto.Object.ReadOnlyTrait.html</loc></url>
+			<url><loc>Teto.Object.ToArrayInterface.html</loc></url>
+			<url><loc>Teto.Object.TypeAssert.html</loc></url>
+			<url><loc>Teto.Object.TypeDefinition.html</loc></url>
+			<url><loc>Teto.Object.TypedProperty.html</loc></url>
+
+
+			<url><loc>source-Object.Helper.html</loc></url>
+			<url><loc>source-Object.MethodAlias.html</loc></url>
+			<url><loc>source-Object.ObjectArray.html</loc></url>
+			<url><loc>source-Object.PrivateGetter.html</loc></url>
+			<url><loc>source-Object.PrivateStrictGetter.html</loc></url>
+			<url><loc>source-Object.PropertyLikeMethod.html</loc></url>
+			<url><loc>source-Object.ReadOnlyTrait.html</loc></url>
+			<url><loc>source-Object.ToArrayInterface.html</loc></url>
+			<url><loc>source-Object.TypeAssert.html</loc></url>
+			<url><loc>source-Object.TypeDefinition.html</loc></url>
+			<url><loc>source-Object.TypedProperty.html</loc></url>
+</urlset>

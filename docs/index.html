@@ -1,171 +1,90 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 
-	<title>ξ ^ω^)ξ Teto PHP Objectsystem</title>
-
-	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
-
+	<title>ξ ^ω^)ξ Teto PHP Objectsystem API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
 </head>
 
-<body>
-<div id="left">
-	<div id="menu">
-<span>Overview</span>
-
-		<div id="groups">
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
 				<h3>Namespaces</h3>
-			<ul>
-				<li>
-					<a href="namespace-Teto.html">
-						Teto<span></span>
-					</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Teto.html">Teto</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Teto.Object.html">Object</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
 
-						<ul>
-				<li>
-					<a href="namespace-Teto.Object.html">
-						Object					</a>
-
-						</li>
-							</ul></li>
-			</ul>
-		</div>
-
-		<hr>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Teto.Object.Helper.html">Teto\Object\Helper</a></li>
-				<li><a href="class-Teto.Object.ObjectArray.html">Teto\Object\ObjectArray</a></li>
-				<li><a href="class-Teto.Object.TypeDefinition.html">Teto\Object\TypeDefinition</a></li>
-			</ul>
-
-			<h3>Interfaces</h3>
-			<ul>
-				<li><a href="class-Teto.Object.ToArrayInterface.html">Teto\Object\ToArrayInterface</a></li>
-			</ul>
-
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Teto.Object.MethodAlias.html">Teto\Object\MethodAlias</a></li>
-				<li><a href="class-Teto.Object.PrivateGetter.html">Teto\Object\PrivateGetter</a></li>
-				<li><a href="class-Teto.Object.PrivateStrictGetter.html">Teto\Object\PrivateStrictGetter</a></li>
-				<li><a href="class-Teto.Object.PropertyLikeMethod.html">Teto\Object\PropertyLikeMethod</a></li>
-				<li><a href="class-Teto.Object.ReadOnly.html">Teto\Object\ReadOnly</a></li>
-				<li><a href="class-Teto.Object.TypeAssert.html">Teto\Object\TypeAssert</a></li>
-				<li><a href="class-Teto.Object.TypedProperty.html">Teto\Object\TypedProperty</a></li>
-			</ul>
-
-
-
-		</div>
 	</div>
-</div>
-
-<div id="splitter"></div>
-
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="">
-		<input type="hidden" name="ie" value="UTF-8">
-		<input type="text" name="q" class="text" placeholder="Search" autofocus>
-	</form>
-
-	<div id="navigation">
-		<ul>
-			<li class="active">
-<span>Overview</span>			</li>
-			<li>
-<span>Namespace</span>			</li>
-			<li>
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-		</ul>
-		<ul>
-		</ul>
 	</div>
 
-<div id="content">
-	<h1>ξ ^ω^)ξ Teto PHP Objectsystem</h1>
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li class="active">
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					<span>
+						Namespace
+					</span>
+				</li>
+<li><span>Class</span></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
 
+		<div class="layout-content">
+		<h1>ξ ^ω^)ξ Teto PHP Objectsystem API documentation</h1>
 
-	<table class="summary" id="namespaces">
-		<caption>Namespaces summary</caption>
+	<table class="table elementSummary">
+		<tr>
+			<th class="table-heading" colspan="2">Namespaces</th>
+		</tr>
+
+			<tr>
+				<td class="table-cell" colspan="2"><a href="namespace-Teto.html">Teto</a></td>
+			</tr>
+			<tr>
+				<td class="table-cell" colspan="2"><a href="namespace-Teto.Object.html">Teto\Object</a></td>
+			</tr>
+
+		<tr>
+			<td class="table-spacer" colspan="2"></td>
+		</tr>
 	</table>
+		</div>
 
-
-
-<table class="summary" id="classes">
-<caption>Classes summary</caption>
-<tr>
-	<td class="name"><a href="class-Teto.Object.Helper.html">Teto\Object\Helper</a></td>
-	<td>Interface for array compatible object</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.ObjectArray.html">Teto\Object\ObjectArray</a></td>
-	<td>Interface for array compatible object</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.TypeDefinition.html">Teto\Object\TypeDefinition</a></td>
-	<td>Type Definition syntax</td>
-</tr>
-</table>
-
-<table class="summary" id="interfaces">
-<caption>Interfaces summary</caption>
-<tr>
-	<td class="name"><a href="class-Teto.Object.ToArrayInterface.html">Teto\Object\ToArrayInterface</a></td>
-	<td>Interface for array compatible object</td>
-</tr>
-</table>
-
-<table class="summary" id="traits">
-<caption>Traits summary</caption>
-<tr>
-	<td class="name"><a href="class-Teto.Object.MethodAlias.html">Teto\Object\MethodAlias</a></td>
-	<td>Make Property like method</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.PrivateGetter.html">Teto\Object\PrivateGetter</a></td>
-	<td>Private property behaves like read only.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.PrivateStrictGetter.html">Teto\Object\PrivateStrictGetter</a></td>
-	<td>Private property behaves like read only.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.PropertyLikeMethod.html">Teto\Object\PropertyLikeMethod</a></td>
-	<td>Make Property like method</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.ReadOnly.html">Teto\Object\ReadOnly</a></td>
-	<td>Restrict write to not accessable property.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.TypeAssert.html">Teto\Object\TypeAssert</a></td>
-	<td>Argument type assertion methods</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Teto.Object.TypedProperty.html">Teto\Object\TypedProperty</a></td>
-	<td>Typed property function for class</td>
-</tr>
-</table>
-
-
-
-</div>
-
-	<div id="footer">
-		ξ ^ω^)ξ Teto PHP Objectsystem API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		<div class="layout-footer">
+			ξ ^ω^)ξ Teto PHP Objectsystem API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
 	</div>
-</div>
-</div>
-<script src="resources/combined.js?f6b88e4516c9ce876f40377845d2621d69e70310"></script>
-<script src="elementlist.js?93657c13deb3ae2c1109148bf82e65df1a5b5a8c"></script>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
 </body>
 </html>

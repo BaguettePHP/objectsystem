@@ -1,0 +1,423 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Trait Teto\Object\TypeAssert | ξ ^ω^)ξ Teto PHP Objectsystem API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Teto.html">Teto</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Teto.Object.html">Object</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Teto.Object.Helper.html">
+							Helper
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.ObjectArray.html">
+							ObjectArray
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.TypeDefinition.html">
+							TypeDefinition
+						</a>
+					</li>
+			</ul>
+		</div>
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li>
+						<a href="Teto.Object.ToArrayInterface.html">
+							ToArrayInterface
+						</a>
+					</li>
+			</ul>
+		</div>
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Teto.Object.MethodAlias.html">
+							MethodAlias
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.PrivateGetter.html">
+							PrivateGetter
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.PrivateStrictGetter.html">
+							PrivateStrictGetter
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.PropertyLikeMethod.html">
+							PropertyLikeMethod
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.ReadOnlyTrait.html">
+							ReadOnlyTrait
+						</a>
+					</li>
+					<li class="active">
+						<a href="Teto.Object.TypeAssert.html">
+							TypeAssert
+						</a>
+					</li>
+					<li>
+						<a href="Teto.Object.TypedProperty.html">
+							TypedProperty
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Teto.Object.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Teto.Object.TypeAssert.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Teto.html">Teto</a>\<a href="namespace-Teto.Object.html">Object</a>\<a href="Teto.Object.TypeAssert.html">TypeAssert</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Argument type assertion methods</p>
+</div>
+		</div>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Object.TypeAssert.html#27" title="Go to source code">Object/TypeAssert.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="assertValue" id="_assertValue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Object.TypeAssert.html#29-71" title="Go to source code">assertValue</a>(<span>string <var>$expected_type</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>bool <var>$is_nullable</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert a value is expected typed
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert a value is expected typed</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$name</var>&nbsp;&nbsp;</td>
+										<td><p>Variable name (for error message)</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Received value</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertValue">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertInt" id="_assertInt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Object.TypeAssert.html#73-85" title="Go to source code">assertInt</a>(<span>mixed <var>$value</var></span>, <span>string <var>$name</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert a value is integer
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert a value is integer</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Received value</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$name</var>&nbsp;&nbsp;</td>
+										<td><p>Variable name (for error message)</p>
+</td>
+									</tr>
+							</table>
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertInt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertString" id="_assertString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Object.TypeAssert.html#87-99" title="Go to source code">assertString</a>(<span>mixed <var>$value</var></span>, <span>string <var>$name</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert a value is string
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert a value is string</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Received value</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$name</var>&nbsp;&nbsp;</td>
+										<td><p>Variable name (for error message)</p>
+</td>
+									</tr>
+							</table>
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertArrayOrObject" id="_assertArrayOrObject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Object.TypeAssert.html#101-114" title="Go to source code">assertArrayOrObject</a>(<span>mixed <var>$value</var></span>, <span>string <var>$name</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert a value is array or array like object (that inplements ArrayAccess)
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert a value is array or array like object (that inplements ArrayAccess)</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Received value</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$name</var>&nbsp;&nbsp;</td>
+										<td><p>Variable name (for error message)</p>
+</td>
+									</tr>
+							</table>
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertArrayOrObject">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertInstanceOf" id="_assertInstanceOf">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Object.TypeAssert.html#116-129" title="Go to source code">assertInstanceOf</a>(<span>mixed <var>$value</var></span>, <span>string <var>$class</var></span>, <span>string <var>$name</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert a value is instance of $class
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert a value is instance of $class</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Received value</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$class</var>&nbsp;&nbsp;</td>
+										<td><p>Class name</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$name</var>&nbsp;&nbsp;</td>
+										<td><p>Variable name (for error message)</p>
+</td>
+									</tr>
+							</table>
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertInstanceOf">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			ξ ^ω^)ξ Teto PHP Objectsystem API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
