@@ -1,9 +1,9 @@
 docs: bin/apigen apigen.neon src/Object/*.php
-	php bin/apigen generate
+	php bin/apigen --workers 1
 
 bin/apigen:
-	php -r 'copy("https://github.com/ApiGen/ApiGen/releases/download/v4.1.2/apigen.phar", "bin/apigen"); chmod("bin/apigen", 0755);'
+	php -r 'copy("https://github.com/ApiGen/ApiGen/releases/download/v7.0.0-alpha.6/apigen.phar", "bin/apigen"); chmod("bin/apigen", 0755);'
 
-.PHONY: test
+.PHONY: test docs
 test: src/Object/*.php tests/*.php
 	php vendor/bin/phpunit
