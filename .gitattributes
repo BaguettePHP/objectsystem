@@ -1,2 +1,4 @@
-tests/ export-ignore
+*.neon export-ignore
+.editorconfig export-ignore
 docs/ export-ignore -crlf -diff
+tests/ export-ignore

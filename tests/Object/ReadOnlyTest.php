@@ -2,6 +2,9 @@
 
 namespace Teto\Object;
 
+use function get_class;
+use function sprintf;
+
 /**
  * @package   Teto\Object\tests
  * @author    USAMI Kenta <tadsan@zonu.me>
@@ -10,11 +13,13 @@ namespace Teto\Object;
  */
 class ReadOnlyTestObject
 {
-    use ReadOnly;
+    use ReadOnlyTrait;
 
-    public    $public    = 'PubliC';
+    public $public = 'PubliC';
+
     protected $protected = 'ProtecteD';
-    private   $private   = 'PrivatE';
+
+    private $private = 'PrivatE';
 }
 
 /**
@@ -27,7 +32,7 @@ class ReadOnlyTest extends \Teto\TestCase
 {
     public function test()
     {
-        $actual = new ReadOnlyTestObject;
+        $actual = new ReadOnlyTestObject();
         $actual->public = 'XXXXX';
 
         $this->assertSame('XXXXX', $actual->public);
@@ -38,9 +43,9 @@ class ReadOnlyTest extends \Teto\TestCase
      */
     public function test_throws_OutOfRangeException($name)
     {
-        $actual = new ReadOnlyTestObject;
+        $actual = new ReadOnlyTestObject();
         $expected_message = sprintf('%s->%s is not writable property.', get_class($actual), $name);
-        $this->setExpectedException(\OutOfRangeException::class, $expected_message);
+        $this->expectException(\OutOfRangeException::class, $expected_message);
 
         $actual->$name = 'YYYYY';
     }

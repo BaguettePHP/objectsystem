@@ -14,14 +14,18 @@ final class TypeDefinitionTest extends \Teto\TestCase
      * @dataProvider dataProviderFor_test_assertValue_success
      */
     public function test_assertValue_success(
-        $def, $expected, $is_nullable, $is_array, $len
+        $def,
+        $expected,
+        $is_nullable,
+        $is_array,
+        $len
     ) {
         $actual = TypeDefinition::parse($def);
 
-        $this->assertSame($expected,    $actual->expected);
+        $this->assertSame($expected, $actual->expected);
         $this->assertSame($is_nullable, $actual->is_nullable);
-        $this->assertSame($is_array,    $actual->is_array);
-        $this->assertSame($len,         $actual->len);
+        $this->assertSame($is_array, $actual->is_array);
+        $this->assertSame($len, $actual->len);
     }
 
     public function dataProviderFor_test_assertValue_success()
@@ -41,9 +45,9 @@ final class TypeDefinitionTest extends \Teto\TestCase
      */
     public function test_assertValue_throwsException($def, $expected_exception)
     {
-        $this->setExpectedException($expected_exception);
+        $this->expectException($expected_exception);
 
-        $actual = TypeDefinition::parse($def);
+        $_ = TypeDefinition::parse($def);
     }
 
     public function dataProviderFor_test_assertValue_throwsException()

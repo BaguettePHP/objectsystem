@@ -2,6 +2,8 @@
 
 namespace Teto\Object;
 
+use function is_array;
+
 /**
  * Interface for array compatible object
  *
@@ -23,7 +25,7 @@ class Helper
             return $ary_or_obj->toArray();
         }
 
-        if (!is_array($ary_or_obj) && !($ary_or_obj instanceof \Traversable)) {
+        if (!is_array($ary_or_obj) && !$ary_or_obj instanceof \Traversable) {
             return $is_toplevel ? null : $ary_or_obj;
         }
 

@@ -2,6 +2,13 @@
 
 namespace Teto\Object;
 
+use function array_key_exists;
+use function array_values;
+use function count;
+use function func_get_args;
+use function is_array;
+use function is_scalar;
+
 /**
  * Interface for array compatible object
  *
@@ -31,10 +38,10 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
         if ($objects instanceof ObjectArray) {
             return $objects;
         } elseif (!is_array($objects) && !$objects instanceof ToArrayInterface) {
-            throw new \InvalidArgumentException;
+            throw new \InvalidArgumentException();
         }
 
-        $model_array = new ObjectArray;
+        $model_array = new ObjectArray();
         $model_array->objects = array_values($objects);
 
         return $model_array;
@@ -89,7 +96,9 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
 
     /**
      * @return int
+     * @phpstan-return positive-int
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->objects);
@@ -99,6 +108,7 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
      * @param  mixed offset
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return !empty($this->objects[$offset]);
@@ -109,6 +119,7 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
      * @return mixed
      * @throws OutOfBoundsException
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (!array_key_exists($offset, $this->objects)) {
@@ -121,9 +132,9 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
     /**
      * @param  mixed offset
      * @param  mixed value
-     * @return void
      * @throws OutOfBoundsException
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if ($offset === null) {
@@ -135,8 +146,8 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
 
     /**
      * @param  mixed offset
-     * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->objects[$offset]);
@@ -145,6 +156,7 @@ class ObjectArray implements \ArrayAccess, \Countable, \IteratorAggregate, ToArr
     /**
      * @return \ArrayIterator
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator($this->objects);

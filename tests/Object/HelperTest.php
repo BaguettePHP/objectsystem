@@ -30,14 +30,44 @@ class HelperTest extends \Teto\TestCase
             [[1, 2, 3], [1, 2, 3]],
             [[1, 2, 3], new \ArrayObject([1, 2, 3])],
             [[1, 2, 3], new ObjectArrayTestModel([1, 2, 3])],
-            [[[1], [2, 3], [4 => [5]]], [[1], [2, 3], [4 => [5]]]],
-            [[[1], [2, 3], [4 => [5]]], new \ArrayObject([[1], [2, 3], [4 => [5]]])],
-            [[[1], [2, 3], [4 => [5]]], new ObjectArrayTestModel([[1], [2, 3], [4 => [5]]])],
-            [[[1], [2, 3], [4 => [5]]], new \ArrayObject([[1], new \ArrayObject([2, 3]), [4 => new \ArrayObject([5])]])],
-            [[[1], [2, 3], [4 => [5]]], new \ArrayObject([[1], new ObjectArrayTestModel([2, 3]), [4 => new ObjectArrayTestModel([5])]])],
-            [[[1], new ObjectArrayTestModel([2, 3]), [4 => new ObjectArrayTestModel([5])]],
-             new ObjectArrayTestModel([[1], new ObjectArrayTestModel([2, 3]), [4 => new ObjectArrayTestModel([5])]])],
-            [['foo' => 'bar', 'fizz' => 'buzz'], ['foo' => 'bar', 'fizz' => 'buzz']],
+            [[[1], [2, 3], [
+                4 => [5],
+            ]], [[1], [2, 3], [
+                4 => [5],
+            ]]],
+            [[[1], [2, 3], [
+                4 => [5],
+            ]], new \ArrayObject([[1], [2, 3], [
+                4 => [5],
+            ]])],
+            [[[1], [2, 3], [
+                4 => [5],
+            ]], new ObjectArrayTestModel([[1], [2, 3], [
+                4 => [5],
+            ]])],
+            [[[1], [2, 3], [
+                4 => [5],
+            ]], new \ArrayObject([[1], new \ArrayObject([2, 3]), [
+                4 => new \ArrayObject([5]),
+            ]])],
+            [[[1], [2, 3], [
+                4 => [5],
+            ]], new \ArrayObject([[1], new ObjectArrayTestModel([2, 3]), [
+                4 => new ObjectArrayTestModel([5]),
+            ]])],
+            [[[1], new ObjectArrayTestModel([2, 3]), [
+                4 => new ObjectArrayTestModel([5]),
+            ]],
+                new ObjectArrayTestModel([[1], new ObjectArrayTestModel([2, 3]), [
+                    4 => new ObjectArrayTestModel([5]),
+                ]])],
+            [[
+                'foo' => 'bar',
+                'fizz' => 'buzz',
+            ], [
+                'foo' => 'bar',
+                'fizz' => 'buzz',
+            ]],
         ];
     }
 }

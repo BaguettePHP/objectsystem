@@ -13,13 +13,21 @@ class PrivateStrictGetterTestObject
     use PrivateStrictGetter;
 
     private $a = 'A';
+
     private $b;
+
     protected $c = 'C';
+
     protected $d;
+
     public $e = 'E';
+
     public $f = 'F';
+
     private static $x = 'X';
+
     protected static $y;
+
     private $z = 'Z';
 }
 
@@ -32,9 +40,13 @@ class PrivateStrictGetterTestObject
 class PrivateStrictGetterInteritedTestObject1 extends PrivateStrictGetterTestObject
 {
     private $a = 'A1';
+
     private $b = 'B1';
+
     protected $c = 'C1';
+
     protected $d = 'D1';
+
     public $e = 'E1';
 }
 
@@ -49,7 +61,9 @@ class PrivateStrictGetterInteritedTestObject2 extends PrivateStrictGetterTestObj
     use PrivateStrictGetter;
 
     private $a = 'A2';
+
     private $b = 'B2';
+
     public $e = 'E2';
 }
 
@@ -77,18 +91,31 @@ class PrivateStrictGetterTest extends \Teto\TestCase
         $values_table = array_merge($default_values, $diff);
 
         foreach ($values_table as $name => $expected) {
-            $this->assertEquals($expected,  $subject->$name);
-            $this->assertEquals(isset($expected),  isset($subject->$name), "property: $name");
-            $this->assertEquals(empty($expected),  empty($subject->$name), "property: $name");
+            $this->assertEquals($expected, $subject->$name);
+            $this->assertEquals(isset($expected), isset($subject->$name), "property: {$name}");
+            $this->assertEquals(empty($expected), empty($subject->$name), "property: {$name}");
         }
     }
 
     public function dataProviderFor_test()
     {
         return [
-            [new PrivateStrictGetterTestObject,           []],
-            [new PrivateStrictGetterInteritedTestObject1, ['c' => 'C1', 'd' => 'D1', 'e' => 'E1', 'z' => 'Z']],
-            [new PrivateStrictGetterInteritedTestObject2, ['a' => 'A2', 'b' => 'B2', 'e' => 'E2']],
+            [new PrivateStrictGetterTestObject(),           []],
+            [
+                new PrivateStrictGetterInteritedTestObject1(), [
+                    'c' => 'C1',
+                    'd' => 'D1',
+                    'e' => 'E1',
+                    'z' => 'Z',
+                ],
+            ],
+            [
+                new PrivateStrictGetterInteritedTestObject2(), [
+                    'a' => 'A2',
+                    'b' => 'B2',
+                    'e' => 'E2',
+                ],
+            ],
         ];
     }
 
@@ -97,24 +124,26 @@ class PrivateStrictGetterTest extends \Teto\TestCase
      */
     public function test_raiseException($subject, $expected_exception, $name)
     {
-        $this->setExpectedException($expected_exception);
+        $this->expectException($expected_exception);
 
         $_ = $subject->$name;
     }
 
     public function dataProviderFor_test_raiseException()
     {
+        $error = class_exists('PHPUnit_Framework_Error') ? 'PHPUnit_Framework_Error' : \PHPUnit\Framework\Error\Error::class;
+
         return [
-            [new PrivateStrictGetterTestObject,           '\OutOfRangeException',     'w'],
-            [new PrivateStrictGetterTestObject,           '\PHPUnit_Framework_Error', 'x'],
-            [new PrivateStrictGetterTestObject,           '\PHPUnit_Framework_Error', 'y'],
-            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException',     'w'],
-            [new PrivateStrictGetterInteritedTestObject1, '\OutOfRangeException',     'x'],
-            [new PrivateStrictGetterInteritedTestObject1, '\PHPUnit_Framework_Error', 'y'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'w'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'x'],
-            [new PrivateStrictGetterInteritedTestObject2, '\PHPUnit_Framework_Error', 'y'],
-            [new PrivateStrictGetterInteritedTestObject2, '\OutOfRangeException',     'z'],
+            [new PrivateStrictGetterTestObject(),           '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterTestObject(),           $error, 'x'],
+            [new PrivateStrictGetterTestObject(),           $error, 'y'],
+            [new PrivateStrictGetterInteritedTestObject1(), '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterInteritedTestObject1(), '\OutOfRangeException',     'x'],
+            [new PrivateStrictGetterInteritedTestObject1(), $error, 'y'],
+            [new PrivateStrictGetterInteritedTestObject2(), '\OutOfRangeException',     'w'],
+            [new PrivateStrictGetterInteritedTestObject2(), '\OutOfRangeException',     'x'],
+            [new PrivateStrictGetterInteritedTestObject2(), $error, 'y'],
+            [new PrivateStrictGetterInteritedTestObject2(), '\OutOfRangeException',     'z'],
         ];
     }
 }

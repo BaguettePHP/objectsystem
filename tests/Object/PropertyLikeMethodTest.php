@@ -55,7 +55,8 @@ class PropertyLikeMethodsTest extends \Teto\TestCase
     public function test_raiseError()
     {
         $val = new PropertyLikeMethodsTestModel('ぬるぽ');
-        $this->setExpectedException(\OutOfRangeException::class, "Unexpected key:'unknown'");
+        $this->expectException(\OutOfRangeException::class);
+        $this->expectExceptionMessage("Unexpected key:'unknown'");
 
         $_ = $val->unknown;
     }

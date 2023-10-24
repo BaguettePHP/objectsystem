@@ -3,7 +3,7 @@
          xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/3.7/phpunit.xsd"
          bootstrap="./tests/bootstrap.php">
   <testsuites>
-    <testsuite>
+    <testsuite name="Teto Objectsystem">
       <directory>./tests</directory>
     </testsuite>
   </testsuites>
@@ -11,10 +11,6 @@
     <whitelist>
       <directory suffix=".php">./src/</directory>
     </whitelist>
-    <blacklist>
-      <directory suffix=".php">./vendor/</directory>
-    </blacklist>
-    <exclude></exclude>
   </filter>
   <logging>
     <log type="coverage-html" target="build/report/coverage" />

@@ -1,5 +1,10 @@
 <?php
+
 namespace Teto\Object;
+
+use function call_user_func;
+use function in_array;
+use function property_exists;
 
 /**
  * Make Property like method
@@ -21,7 +26,7 @@ trait PropertyLikeMethod
     public function __get($name)
     {
         if (!isset(self::$property_like_methods)) {
-            throw new \LogicException(static::class.'::$property_like_methods is not set.');
+            throw new \LogicException(static::class . '::$property_like_methods is not set.');
         }
 
         if (isset(self::$property_like_methods[$name])) {

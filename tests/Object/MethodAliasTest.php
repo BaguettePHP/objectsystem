@@ -47,7 +47,8 @@ class MethodAliasTest extends \Teto\TestCase
     public function test_raiseError()
     {
         $val = new MethodAliasTestClass('ぬるぽ');
-        $this->setExpectedException('\BadMethodCallException', "MethodAliasTestClass::unknown() is not exists.");
+        $this->expectException(\BadMethodCallException::class);
+        $this->expectExceptionMessage('MethodAliasTestClass::unknown() is not exists.');
 
         $_ = $val->unknown();
     }
